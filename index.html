@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div_externa">
+        <div id="div_externa_monitor">
+            <div id="div_painel_solar">
+            </div>
+            <div id="div_fundo_monitor">
+                <input type="text" id="m-s" value=''>
+                <input type="text" id="visor" value=''>
+            </div>
+        </div>
+        <div id="div_teclado">
+                <table>
+                    <tr>
+                        <th>
+                            <div id = btn-c>
+                                <input type="button" value = 'CE' id="C" onclick="limpar(value);"><br>
+                                <input type="button" value = 'C' id="CE" onclick="limpar(value);"><br>
+                            </div>
+                        </th>
+                            <div>
+                                <th>
+                                    <label>MRC</label>
+                                    <input type="button" onclick="salvar('MRC');" class="btn-memoria">
+                                </th>
+                            </div>
+                            <div>
+                                <th>
+                                    <label>M-</label>
+                                    <input type="button" onclick="salvar('M-');"class="btn-memoria">
+                                </th>
+                            </div>
+                            <div>
+                                <th>
+                                    <label>M+</label>
+                                    <input type="button" value = '' onclick="salvar('M+');" class="btn-memoria">
+                                </th>
+                            </div>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value = '+/-' onclick="inverter();" class="btn"></td>
+                        <td><input type="button" value = '√' class="btn" onclick="raiz();"></td>
+                        <td><input type="button" value = '%' onclick="operador('porcentagem');" class="btn"></td>
+                        <td><input type="button" value = '÷' onclick="operador('divisao')" class="btn" style="font-size: 2.5em"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value = '7' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = '8' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = '9' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = 'X' onclick="operador('multiplicacao')"class="btn"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value = '4' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = '5' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = '6' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = '-'  onclick="operador('subtracao')"class="btn" style="font-size: 2.5em"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value = '1' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = '2' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = '3' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = '+'  onclick="operador('soma')"class="btn-soma"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value = '0' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = '.' onclick="concatenar(value);" class="btn"></td>
+                        <td><input type="button" value = '=' onclick="operador('resultado')" class="btn"></td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+    <script src="calculadora.js"></script>
+</body>
+</html>
